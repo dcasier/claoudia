@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/dcasier/claoudy"
-	"github.com/dcasier/claoudy/metamodel"
+	"github.com/dcasier/claoudia"
+	"github.com/dcasier/claoudia/metamodel"
 	"fmt"
 	"net/http"
 	"net"
