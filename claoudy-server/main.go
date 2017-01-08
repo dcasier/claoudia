@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"github.com/gorilla/mux"
-	"github.com/dcasier/claoudy"
+	"github.com/dcasier/claoudia"
 	"os"
 	"log"
 	"crypto/tls"

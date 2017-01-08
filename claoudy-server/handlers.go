@@ -3,7 +3,7 @@ package main
 import(
 	"net/http"
     "github.com/gorilla/mux"
-	"github.com/dcasier/claoudy/metamodel"
+	"github.com/dcasier/claoudia/metamodel"
 	"encoding/base64"
 	//"io/ioutil"
 	"fmt"

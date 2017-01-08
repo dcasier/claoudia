@@ -7,7 +7,7 @@ import (
     "encoding/json"
     //"io/ioutil"
     "github.com/minio/minio-go"
-	"github.com/dcasier/claoudy/metamodel"
+	"github.com/dcasier/claoudia/metamodel"
 	"bytes"
 	"strings"
 	"unicode"
