@@ -138,8 +138,8 @@ func GetMediaHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-	keys := &metamodel.Keys{AccessKey:  "08ATNB835CYQ504UXM0N", SecretKey: "kRcBHv5dyhtfVS3jlIKBQ97RWrrm0fBUSUsaxBAP"}
-	//keys := GetKeys(r)
+	//keys := &metamodel.Keys{AccessKey:  "08ATNB835CYQ504UXM0N", SecretKey: "kRcBHv5dyhtfVS3jlIKBQ97RWrrm0fBUSUsaxBAP"}
+	keys := GetKeys(r)
 	fmt.Println(keys)
 	vars := mux.Vars(r)
 	object := GetObject(vars["event"], vars["media"], *keys)
@@ -155,6 +155,7 @@ func GetMediaHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(stat)
 	w.Header().Set("Content-Type", stat.ContentType)
     w.Header().Set("Content-Length", strconv.FormatInt(stat.Size, 10))
+	w.Header().Set("responseType", "Blob")
 	io.Copy(w, object)
 }
 
